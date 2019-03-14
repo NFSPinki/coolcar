@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="Coolcar" content="Your car is shit, mine is better">
+	<meta name="robots" content="index, follow" />
 	<title>Reveal</title>
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -37,9 +39,11 @@
 			color: white;
 			padding: 20px;
 		}
+
 		.text.txt-center {
 			text-align: center;
 		}
+
 		.text a {
 			color: #0fe4d2;
 		}
@@ -47,12 +51,15 @@
 		.has-animation {
 			position: relative;
 		}
+
 		.has-animation p, .has-animation img {
 			opacity: 0;
 		}
+
 		.has-animation.animate-in p, .has-animation.animate-in img {
 			animation: textHidden 0.1s 1.1s forwards;
 		}
+
 		.has-animation.animate-in:before, .has-animation.animate-in:after {
 			content: '';
 			position: absolute;
@@ -61,22 +68,28 @@
 			height: 100%;
 			z-index: 10;
 		}
+
 		.has-animation.animate-in:before {
 			background-color: #bc9b00;
 		}
+
 		.has-animation.animate-in:after {
 			background-color: #525252;
 			animation-delay: .5s;
 		}
+
 		.has-animation.animation-ltr.animate-in:before {
 			animation: revealLTR 1.8s ease;
 		}
+
 		.has-animation.animation-ltr.animate-in:after {
 			animation: revealLTR 1s .6s ease;
 		}
+
 		.has-animation.animation-rtl.animate-in:before {
 			animation: revealRTL 1.8s ease;
 		}
+
 		.has-animation.animation-rtl.animate-in:after {
 			animation: revealRTL 1s .6s ease;
 		}
@@ -95,6 +108,7 @@
 				right: 100%;
 			}
 		}
+
 		@keyframes revealLTR {
 			0% {
 				width: 0;
@@ -109,6 +123,7 @@
 				left: 100%;
 			}
 		}
+
 		@keyframes textHidden {
 			0% {
 				opacity: 0;
@@ -129,27 +144,29 @@
 <br>
 
 <div class="has-animation animation-rtl" data-delay="1000">
-	<p class="text">It goes very fast and has a v8 engine so it sounds very cool! It's most definitely better than yours, i'll beat you to tesco and still have enough room for my shopping. hows that for a cool car?</p>
+	<p class="text">It goes very fast and has a v8 engine so it sounds very cool! It's most definitely better than
+		yours, i'll beat you to tesco and still have enough room for my shopping. hows that for a cool car?</p>
 </div>
 <br>
 <br>
 
 <div class="has-animation animation-rtl" data-delay="1000">
-	<img src="https://i.imgur.com/GcuXXED.jpg" width="800" alt="There was supposed to be a cool car, :(" />
+	<img src="https://i.imgur.com/GcuXXED.jpg" width="800" alt="There was supposed to be a cool car, :("/>
 </div>
 
 <br>
 <br>
 <div class="has-animation animation-rtl" data-delay="1000">
-	<p class="text">Look how fast and cool it looks!<br>Your car is probably a stinky Vauxhall Astra Diesel, the fuck do you think you are.</p>
+	<p class="text">Look how fast and cool it looks!<br>Your car is probably a stinky Vauxhall Astra Diesel, the fuck do
+		you think you are.</p>
 </div>
 
 </body>
 
 <script>
-	$(document).ready(function() {
-		$('.has-animation').each(function(index) {
-			$(this).delay($(this).data('delay')).queue(function(){
+	$(document).ready(function () {
+		$('.has-animation').each(function (index) {
+			$(this).delay($(this).data('delay')).queue(function () {
 				$(this).addClass('animate-in');
 			});
 		});
